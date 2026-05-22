@@ -4,7 +4,9 @@ Professional portfolio for **Md Tahsin** — AI Engineer & Researcher (MagicMind
 
 ## Live demo
 
-Deployed on [Vercel](https://vercel.com) from this repository.
+**[https://portfolio-psi-orcin-88.vercel.app](https://portfolio-psi-orcin-88.vercel.app)**
+
+Deployed on [Vercel](https://vercel.com/tahsin/portfolio) from [this repository](https://github.com/T-biohazard/my_portfolio_dev).
 
 ## Run locally
 

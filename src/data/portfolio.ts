@@ -18,7 +18,7 @@ export const profile = {
   brandFull: "Md Tahsin",
   initials: "MT",
   avatar: "/profile.png",
-  title: "AI Engineer · Research Scientist · PhD Applicant (Fall 2027)",
+  title: "AI Engineer · Research Scientist · PhD Applicant",
   scholarAffiliation:
     "AI & MLOps Engineer @ MagicMind · Graduate Research Assistant @ EWU",
   tagline:
@@ -28,7 +28,7 @@ export const profile = {
   phone: "+880 1763-357810",
   age: 24,
   availability:
-    "Applying for PhD programmes in the United States (Fall 2027) · open to research collaborations and impactful AI engineering roles",
+    "PhD applicant · open to research collaborations and impactful AI engineering roles",
   links: {
     scholar: "https://scholar.google.com/citations?user=6zm80xAAAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/tahsin0o/",
@@ -84,7 +84,7 @@ export const aboutParagraphs = [
   "I'm an AI & MLOps Engineer at MagicMind (Silicon Valley, remote) and a Graduate Research Assistant at East West University — across agentic systems, physiological AI, medical imaging, agricultural AI, and explainable deep learning.",
   "My path started with rice authenticity for millions of Bangladeshis. That work reached BRRI and BINA, became nationally recognised Elsevier datasets, and showed me how careful AI can protect real lives.",
   "At Reddot Digital (Robi Axiata — top-5 company in Bangladesh), I learned engineering at scale: Swift/UIKit for BingeBD on the App Store, recommendation ML, LLM chatbots, and production server security. At MagicMind, those lessons meet open research questions about physiological state, multi-agent safety, and formal planning.",
-  "I'm applying for PhD programmes in the United States for Fall 2027 to pursue adaptive physiological AI, uncertainty-aware agent systems, and formally safe human-facing AI.",
+  "I'm applying for PhD programmes to pursue adaptive physiological AI, uncertainty-aware agent systems, and formally safe human-facing AI.",
 ];
 
 export const researchInterests = [
@@ -309,7 +309,7 @@ export const education = {
   school: "East West University, Dhaka, Bangladesh",
   degree: "B.Sc. Computer Science & Engineering (CSE)",
   period: "2020 – 2024",
-  gpa: "3.23",
+  gpa: "3.7",
   thesisSupervisor: "Prof. Nawab Yousuf Ali, Professor, CSE",
   researchSupervisor: "Dr. Raihan Ul Islam, Associate Professor, CSE",
   note: 'Recognised as "Successful Student" in the EWU newsletter for outstanding research and academic contributions',

@@ -15,7 +15,7 @@ export function About() {
       id="about"
       label="About me"
       title="Research depth. Production discipline."
-      subtitle="PhD applicant (Fall 2027) · building AI that is adaptive, explainable, and safe for real people."
+      subtitle="PhD applicant · building AI that is adaptive, explainable, and safe for real people."
     >
       <div className="grid gap-8 lg:grid-cols-5 lg:gap-12">
         <div className="reveal space-y-5 lg:col-span-3">

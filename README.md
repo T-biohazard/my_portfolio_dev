@@ -1,6 +1,6 @@
 # my_portfolio_dev
 
-Professional portfolio for **Md Tahsin** — AI & MLOps Engineer (MagicMind), Graduate Research Assistant (EWU), PhD Applicant (Fall 2027). Updated from 2026 CV & profile summary.
+Professional portfolio for **Md Tahsin** — AI & MLOps Engineer (MagicMind), Graduate Research Assistant (EWU), PhD Applicant. Updated from 2026 CV & profile summary.
 
 ## Live demo
 

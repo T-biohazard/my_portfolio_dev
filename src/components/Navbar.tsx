@@ -1,19 +1,61 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems, profile } from "../data/portfolio";
+import { scrollToId, scrollToTop } from "../lib/smoothScroll";
 
 export function Navbar({ active }: { active: string }) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    let frame = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => setScrolled(window.scrollY > 12));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const handleNav = (id: string) => {
+    setOpen(false);
+    scrollToId(id);
+  };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-ink-950/90 backdrop-blur-2xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ease-smooth ${
+        scrolled
+          ? "border-white/[0.08] bg-ink-950/95 shadow-lg shadow-black/20 backdrop-blur-xl"
+          : "border-white/[0.04] bg-ink-950/80 backdrop-blur-lg"
+      }`}
+    >
+      <nav
+        className={`mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 transition-all duration-300 ease-smooth sm:gap-4 sm:px-6 ${
+          scrolled ? "py-2.5 sm:py-3" : "py-3 sm:py-4"
+        }`}
+      >
         <a
           href="#"
           className="group flex min-w-0 shrink-0 items-center gap-2.5"
-          onClick={() => setOpen(false)}
+          onClick={(e) => {
+            e.preventDefault();
+            setOpen(false);
+            scrollToTop();
+          }}
         >
           <span
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-mint text-sm font-bold text-ink-950 shadow-lg shadow-accent/20 sm:h-10 sm:w-10"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-mint text-sm font-bold text-ink-950 shadow-lg shadow-accent/20 transition-transform duration-300 ease-smooth group-hover:scale-105 sm:h-10 sm:w-10"
             aria-hidden
           >
             {profile.initials}
@@ -29,13 +71,20 @@ export function Navbar({ active }: { active: string }) {
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={`whitespace-nowrap rounded-lg px-2.5 py-2 text-sm transition xl:px-3 ${
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNav(item.id);
+                }}
+                className={`relative whitespace-nowrap rounded-lg px-2.5 py-2 text-sm transition-all duration-200 ease-smooth xl:px-3 ${
                   active === item.id
                     ? "bg-white/10 text-white"
                     : "text-ink-400 hover:bg-white/5 hover:text-white"
                 }`}
               >
                 {item.label}
+                {active === item.id && (
+                  <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent" />
+                )}
               </a>
             </li>
           ))}
@@ -46,7 +95,7 @@ export function Navbar({ active }: { active: string }) {
             href={profile.links.scholar}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-accent px-3 py-2 text-xs font-semibold text-ink-950 transition hover:bg-accent-light sm:inline-flex sm:px-4 sm:text-sm"
+            className="btn-primary hidden sm:inline-flex"
           >
             Scholar
           </a>
@@ -54,33 +103,45 @@ export function Navbar({ active }: { active: string }) {
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 text-white lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 text-white transition-all duration-200 ease-smooth hover:border-white/25 hover:bg-white/5 lg:hidden"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              className={`h-5 w-5 transition-transform duration-300 ease-smooth ${open ? "rotate-90" : ""}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {open ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
+              )}
+            </svg>
           </button>
         </div>
       </nav>
 
-      {open && (
-        <div className="border-t border-white/[0.06] bg-ink-950/98 px-4 py-4 lg:hidden">
+      <div
+        className={`overflow-hidden border-t border-white/[0.06] bg-ink-950/98 transition-all duration-300 ease-smooth lg:hidden ${
+          open ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 py-4">
           <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={`block rounded-xl px-3 py-3 text-center text-sm ${
-                    active === item.id ? "bg-accent/15 text-accent" : "text-ink-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav(item.id);
+                  }}
+                  className={`block rounded-xl px-3 py-3 text-center text-sm transition-all duration-200 ease-smooth ${
+                    active === item.id
+                      ? "bg-accent/15 text-accent"
+                      : "text-ink-300 hover:bg-white/5 hover:text-white"
                   }`}
-                  onClick={() => setOpen(false)}
                 >
                   {item.label}
                 </a>
@@ -91,12 +152,12 @@ export function Navbar({ active }: { active: string }) {
             href={profile.links.scholar}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 flex w-full items-center justify-center rounded-xl bg-accent py-3 text-sm font-semibold text-ink-950"
+            className="btn-primary mt-4 flex w-full justify-center"
           >
             Google Scholar
           </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }

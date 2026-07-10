@@ -1,13 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { heroSlides, profile, socialLinks } from "../data/portfolio";
+import { scrollToId } from "../lib/smoothScroll";
 
 const heroSocialLinks = socialLinks.filter((l) => l.label !== "Google Scholar");
 
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] overflow-hidden gradient-mesh pt-[4.5rem] sm:pt-24">
-      <div className="pointer-events-none absolute -left-40 top-20 h-[28rem] w-[28rem] max-w-[90vw] rounded-full bg-accent/15 blur-[100px] animate-float" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-[28rem] w-[28rem] max-w-[90vw] rounded-full bg-accent/15 blur-[80px] animate-float md:blur-[100px]" />
       <div
         className="pointer-events-none absolute -right-32 top-1/3 h-72 w-72 max-w-[70vw] rounded-full bg-mint/10 blur-[90px] animate-float"
         style={{ animationDelay: "1.5s" }}
@@ -15,7 +16,7 @@ export function Hero() {
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:pb-24">
         <div className="grid w-full min-w-0 grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-12 xl:gap-16">
-          <div className="reveal w-full min-w-0 max-w-none">
+          <div className="reveal reveal-hero w-full min-w-0 max-w-none">
             <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs leading-snug text-ink-300 sm:text-sm">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75" />
@@ -35,18 +36,17 @@ export function Hero() {
             </p>
 
             <div className="mt-6 flex w-full min-w-0 flex-col gap-3 xs:flex-row xs:flex-wrap sm:mt-8">
-              <a
-                href={profile.links.email}
-                className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-ink-950 shadow-lg shadow-accent/25 transition hover:bg-accent-light xs:w-auto"
-              >
+              <a href={profile.links.email} className="btn-primary group w-full gap-2 xs:w-auto">
                 Say hello
-                <span aria-hidden>→</span>
+                <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">
+                  →
+                </span>
               </a>
               <a
                 href={profile.links.scholar}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full min-w-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-3.5 text-sm font-medium text-white transition hover:border-accent/40 hover:bg-accent/10 xs:w-auto"
+                className="btn-ghost w-full xs:w-auto"
               >
                 Google Scholar
               </a>
@@ -70,7 +70,7 @@ export function Hero() {
               {profile.stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="glass-card min-w-0 p-4 transition hover:border-accent/25 sm:p-5"
+                  className="interactive-card min-w-0 p-4 sm:p-5"
                 >
                   <div className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                     {stat.value}
@@ -88,14 +88,16 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="reveal reveal-delay-1 hero-swiper w-full min-w-0 lg:max-w-none">
+          <div className="reveal reveal-hero reveal-delay-1 hero-swiper w-full min-w-0 lg:max-w-none">
             <Swiper
               modules={[Autoplay, EffectFade, Pagination]}
               effect="fade"
               fadeEffect={{ crossFade: true }}
-              autoplay={{ delay: 6000, disableOnInteraction: false }}
+              speed={900}
+              autoplay={{ delay: 6500, disableOnInteraction: false, pauseOnMouseEnter: true }}
               pagination={{ clickable: true }}
               loop
+              grabCursor
               className="glass-card glow-border w-full overflow-hidden !pb-14"
             >
               {heroSlides.map((slide) => (
@@ -126,16 +128,17 @@ export function Hero() {
         </div>
       </div>
 
-      <a
-        href="#about"
-        className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-ink-500 transition hover:text-ink-300 sm:flex"
+      <button
+        type="button"
+        onClick={() => scrollToId("about")}
+        className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-ink-500 transition-colors duration-200 hover:text-ink-300 sm:flex"
         aria-label="Scroll to about"
       >
         <span className="text-[10px] uppercase tracking-[0.25em]">Explore</span>
-        <svg className="h-4 w-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="h-4 w-4 animate-soft-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
-      </a>
+      </button>
     </section>
   );
 }

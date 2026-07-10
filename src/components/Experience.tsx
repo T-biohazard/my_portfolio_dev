@@ -21,7 +21,7 @@ export function Experience() {
             >
               <div className="absolute left-0 top-6 hidden h-4 w-4 rounded-full border-2 border-accent bg-ink-950 shadow-[0_0_12px_rgba(61,156,245,0.6)] lg:block" />
 
-              <div className="glass-card glow-border overflow-hidden transition hover:border-accent/20">
+              <div className="interactive-card glow-border overflow-hidden">
                 <div className="border-b border-white/[0.06] bg-white/[0.02] px-5 py-4 sm:px-8 sm:py-5">
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
@@ -63,7 +63,7 @@ export function Experience() {
                   {job.highlights.map((h) => (
                     <div
                       key={h.title}
-                      className="rounded-xl border border-white/[0.05] bg-ink-900/50 p-4 transition hover:border-white/10"
+                      className="rounded-xl border border-white/[0.05] bg-ink-900/50 p-4 transition-all duration-200 ease-smooth hover:border-white/10"
                     >
                       <h4 className="text-sm font-semibold text-white">{h.title}</h4>
                       <p className="mt-2 text-xs leading-relaxed text-ink-500 sm:text-sm">

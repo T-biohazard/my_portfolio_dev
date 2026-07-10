@@ -27,7 +27,7 @@ export function Skills() {
         {skillGroups.map((group, i) => (
           <div
             key={group.category}
-            className="reveal glass-card flex flex-col p-5 sm:p-6"
+            className="reveal interactive-card flex flex-col p-5 sm:p-6"
             style={{ animationDelay: `${i * 50}ms` }}
           >
             <div className="flex items-start justify-between gap-2">
@@ -45,7 +45,7 @@ export function Skills() {
               {group.items.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-lg border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-xs text-ink-300 transition hover:border-accent/30 hover:text-white"
+                  className="rounded-lg border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-xs text-ink-300 transition-colors duration-200 hover:border-accent/30 hover:text-white"
                 >
                   {skill}
                 </span>

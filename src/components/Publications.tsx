@@ -50,7 +50,7 @@ export function Publications() {
         href={profile.links.scholar}
         target="_blank"
         rel="noopener noreferrer"
-        className="reveal mb-8 flex flex-col gap-3 rounded-2xl border border-accent/25 bg-gradient-to-r from-accent/10 via-transparent to-mint/10 p-5 transition hover:border-accent/40 sm:flex-row sm:items-center sm:justify-between sm:p-6"
+        className="reveal interactive-card mb-8 flex flex-col gap-3 rounded-2xl border border-accent/25 bg-gradient-to-r from-accent/10 via-transparent to-mint/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"
       >
         <div>
           <p className="text-sm font-semibold text-white">Google Scholar Profile</p>
@@ -70,7 +70,7 @@ export function Publications() {
             key={f.id}
             type="button"
             onClick={() => setFilter(f.id)}
-            className={`shrink-0 rounded-full px-4 py-2 text-xs font-medium transition sm:text-sm ${
+            className={`shrink-0 rounded-full px-4 py-2 text-xs font-medium transition-all duration-200 ease-smooth sm:text-sm ${
               filter === f.id
                 ? "bg-accent text-ink-950"
                 : "border border-white/10 text-ink-400 hover:border-white/20 hover:text-white"
@@ -83,7 +83,7 @@ export function Publications() {
       </div>
 
       <div className="mt-8 hidden md:block">
-        <div className="grid max-h-[32rem] gap-4 overflow-y-auto pr-2 scrollbar-thin md:grid-cols-2">
+        <div key={filter} className="fade-in grid max-h-[32rem] gap-4 overflow-y-auto pr-2 scrollbar-thin md:grid-cols-2">
           {filtered.map((pub) => (
             <PubCard key={pub.title} pub={pub} />
           ))}
@@ -92,12 +92,15 @@ export function Publications() {
 
       <div className="mt-8 pub-swiper md:hidden">
         <Swiper
+          key={filter}
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={16}
           slidesPerView={1}
+          speed={600}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 7500, disableOnInteraction: true }}
+          grabCursor
           className="!pb-14"
         >
           {filtered.map((pub) => (
@@ -118,7 +121,7 @@ export function Publications() {
 function PubCard({ pub, tall }: { pub: Publication; tall?: boolean }) {
   return (
     <article
-      className={`glass-card flex flex-col p-5 transition hover:border-accent/20 sm:p-6 ${
+      className={`interactive-card flex flex-col p-5 sm:p-6 ${
         tall ? "min-h-[280px]" : ""
       }`}
     >

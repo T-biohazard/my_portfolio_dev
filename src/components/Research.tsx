@@ -24,7 +24,7 @@ export function Research() {
           {researchInterests.map((item, i) => (
             <article
               key={item.title}
-              className={`reveal glass-card group p-5 transition hover:-translate-y-1 hover:border-white/15 sm:p-6`}
+              className={`reveal interactive-card group p-5 sm:p-6`}
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <span className="text-2xl" role="img" aria-hidden>
@@ -56,8 +56,10 @@ export function Research() {
               modules={[Autoplay, Pagination]}
               spaceBetween={16}
               slidesPerView={1.05}
+              speed={650}
               pagination={{ clickable: true }}
-              autoplay={{ delay: 8000, disableOnInteraction: true }}
+              autoplay={{ delay: 8000, disableOnInteraction: true, pauseOnMouseEnter: true }}
+              grabCursor
               className="!pb-12"
             >
               {researchDomains.map((d) => (
@@ -87,7 +89,7 @@ function DomainCard({
   const gradient = domainColors[d.color] ?? domainColors.accent;
   return (
     <article
-      className={`rounded-2xl border bg-gradient-to-br p-6 sm:p-8 ${gradient}`}
+      className={`rounded-2xl border bg-gradient-to-br p-6 transition-all duration-300 ease-smooth sm:p-8 ${gradient}`}
     >
       <h4 className="text-lg font-semibold text-white">{d.domain}</h4>
       <p className="mt-2 text-sm text-ink-400">{d.summary}</p>

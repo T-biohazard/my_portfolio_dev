@@ -45,9 +45,13 @@ export default {
           DEFAULT: "#f5b84a",
         },
       },
+      transitionTimingFunction: {
+        smooth: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
       animation: {
-        "fade-up": "fadeUp 0.7s ease-out forwards",
-        float: "float 7s ease-in-out infinite",
+        "fade-up": "fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        float: "float 8s ease-in-out infinite",
+        "soft-bounce": "softBounce 2s ease-in-out infinite",
       },
       keyframes: {
         fadeUp: {
@@ -55,8 +59,12 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         float: {
-          "0%, 100%": { transform: "translateY(0) scale(1)" },
-          "50%": { transform: "translateY(-14px) scale(1.02)" },
+          "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+          "50%": { transform: "translate3d(0, -12px, 0)" },
+        },
+        softBounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(4px)" },
         },
       },
       boxShadow: {

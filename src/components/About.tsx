@@ -31,7 +31,7 @@ export function About() {
         </div>
 
         <div className="reveal reveal-delay-1 space-y-5 lg:col-span-2">
-          <div className="glass-card glow-border p-6">
+          <div className="glass-card glow-border p-6 transition-all duration-200 ease-smooth">
             <h3 className="flex items-center gap-2 font-semibold text-white">
               <span className="text-accent">◎</span> Education
             </h3>

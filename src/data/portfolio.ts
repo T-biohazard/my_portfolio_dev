@@ -26,7 +26,6 @@ export const profile = {
   location: "Gulshan-01, Dhaka-1216, Bangladesh",
   email: "tahsin30899@gmail.com",
   phone: "+880 1763-357810",
-  age: 24,
   availability:
     "PhD applicant · open to research collaborations and impactful AI engineering roles",
   links: {
@@ -57,7 +56,7 @@ export const heroSlides = [
   {
     eyebrow: "Now · MagicMind Co. Ltd. · Silicon Valley",
     headline: "PEMS-aware wellness AI in real time",
-    body: "Five AGNO agents adapt breathwork, meditation, and learning to live EEG, HRV, and SpO₂ — with PDDL-verified safety before anything executes.",
+    body: "A multi-agent personalisation system adapts breathwork, meditation, and learning to live EEG, HRV, and SpO₂ — with PDDL-verified safety before anything executes.",
     cta: "See industry work",
     accent: "accent" as const,
   },
@@ -78,12 +77,12 @@ export const heroSlides = [
 ];
 
 export const aboutIntro =
-  "Hi — I'm Tahsin, 24, based in Dhaka. I grew up watching technology skip the communities that needed it most. That shaped everything I build: AI that is rigorous in research, honest in production, and meant for people historically last to benefit from it.";
+  "Hi — I'm Tahsin, based in Dhaka. I grew up watching technology skip the communities that needed it most. That shaped everything I build: AI that is rigorous in research, honest in production, and meant for people historically last to benefit from it.";
 
 export const aboutParagraphs = [
   "I'm an AI & MLOps Engineer at MagicMind (Silicon Valley, remote) and a Graduate Research Assistant at East West University — across agentic systems, physiological AI, medical imaging, agricultural AI, and explainable deep learning.",
   "My path started with rice authenticity for millions of Bangladeshis. That work reached BRRI and BINA, became nationally recognised Elsevier datasets, and showed me how careful AI can protect real lives.",
-  "At Reddot Digital (Robi Axiata — top-5 company in Bangladesh), I learned engineering at scale: Swift/UIKit for BingeBD on the App Store, recommendation ML, LLM chatbots, and production server security. At MagicMind, those lessons meet open research questions about physiological state, multi-agent safety, and formal planning.",
+  "At Reddot Digital (Robi Axiata — top-5 company in Bangladesh), I learned engineering at scale: Swift/UIKit for BingeBD on the App Store, recommendation ML, and LLM chatbots. At MagicMind, those lessons meet open research questions about physiological state, multi-agent safety, and formal planning.",
   "I'm applying for PhD programmes to pursue adaptive physiological AI, uncertainty-aware agent systems, and formally safe human-facing AI.",
 ];
 
@@ -172,7 +171,7 @@ export const researchDomains = [
     projects: [
       "ExamStressEEG — 26 participants, Muse 2, Mendeley DOI 10.17632/fyj9by2t22.1",
       "EEG-based wheelchair control for motor-disabled users",
-      "Real-time HRV/EEG/SpO₂ fusion in MagicMind's 5-agent stack",
+      "Real-time HRV/EEG/SpO₂ fusion in MagicMind's multi-agent personalisation stack",
       "LLM-to-PDDL safety gates for breathwork (SpO₂ thresholds before retention)",
     ],
     color: "violet",
@@ -203,8 +202,8 @@ export const experience = [
       "Next-generation gamified wellness platform — adaptive breathwork, meditation, and immersive journeys with live PEMS biofeedback and AI personalisation.",
     highlights: [
       {
-        title: "5-Agent Personalisation Engine (AGNO)",
-        text: "Student State Analyzer (EEG/HRV/SpO₂ fusion), Personalization Strategist (3-timescale planning + Safety Guardian), Chapter Composer, Evaluator Agent with persistent memory and feedback loop.",
+        title: "Multi-Agent Personalisation System",
+        text: "Agentic AI personaliser with five collaborating agents — Student State Analyzer (EEG/HRV/SpO₂ fusion), Personalization Strategist (3-timescale planning + Safety Guardian), Chapter Composer, and Evaluator with persistent memory and continuous feedback.",
       },
       {
         title: "LLM-to-PDDL Planning (L2P)",
@@ -225,6 +224,10 @@ export const experience = [
       {
         title: "MLOps & Infrastructure",
         text: "W&B experiment tracking, prompt versioning, Docker/Kubernetes, Terraform IaC, GCP CI/CD, Headscale/Tailscale VPN mesh, AWS EC2, Hetzner deployment.",
+      },
+      {
+        title: "Backend, Security & Scaling",
+        text: "API security, rate limiting, server-side maintenance, scalability optimisations, and CI/CD pipeline management for production services.",
       },
     ],
   },
@@ -250,20 +253,16 @@ export const experience = [
         title: "LLM Chatbot & Web Platform",
         text: "Deployed real-time LLM user-support chatbot; contributed to BingeBD web streaming platform.",
       },
-      {
-        title: "Backend, Security & Scaling",
-        text: "API security, rate limiting, server-side maintenance, scalability optimisations, and CI/CD pipeline management.",
-      },
     ],
   },
   {
-    id: "infra",
-    role: "Infrastructure Engineer (Contract)",
-    org: "Datacenter & Cloud Environments",
-    location: "Remote / On-site",
+    id: "earth-telecom",
+    role: "Datacenter Engineer",
+    org: "Earth Telecom Ltd.",
+    location: "Dhaka, Bangladesh",
     period: "2024 – 2025",
     summary:
-      "Hands-on datacenter and infrastructure work between industry roles — deployments, networking, and production server operations.",
+      "Hands-on datacenter operations — server management, deployments, and production infrastructure.",
     highlights: [
       {
         title: "Server & Deployment Ops",
@@ -631,7 +630,7 @@ export const extracurricular = [
   "Teaching — lab sessions, capstone guidance, and research methodology training at EWU",
   "Mentorship — ~50+ students through AI/ML research and peer-reviewed publication",
   "Active researcher — agentic AI, biometrics, medical & agricultural AI, semi-supervised learning",
-  "Infrastructure — datacenter ops, VPN mesh networking, and production server deployment",
+  "Infrastructure — datacenter operations at Earth Telecom Ltd. and production server deployment",
 ];
 
 export const socialLinks = [

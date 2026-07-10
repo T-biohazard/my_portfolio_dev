@@ -17,6 +17,7 @@ export const profile = {
   brandShort: "Tahsin",
   brandFull: "Md Tahsin",
   initials: "MT",
+  avatar: "/profile.png",
   title: "AI Engineer · Research Scientist · PhD Applicant (Fall 2027)",
   scholarAffiliation:
     "AI & MLOps Engineer @ MagicMind · Graduate Research Assistant @ EWU",

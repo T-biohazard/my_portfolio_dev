@@ -1,4 +1,5 @@
 import { profile, socialLinks } from "../data/portfolio";
+import { ProfileAvatar } from "./ProfileAvatar";
 import { Section } from "./Section";
 
 export function Contact() {
@@ -13,9 +14,7 @@ export function Contact() {
       <div className="reveal mx-auto max-w-3xl">
         <div className="interactive-card glow-border overflow-hidden text-center">
           <div className="bg-gradient-to-b from-accent/10 to-transparent px-6 py-10 sm:px-12 sm:py-14">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-mint text-2xl font-bold text-ink-950 shadow-xl shadow-accent/20">
-              {profile.initials}
-            </div>
+            <ProfileAvatar size="md" className="mx-auto shadow-xl shadow-accent/20" />
             <h3 className="mt-6 font-serif text-2xl text-white sm:text-3xl">
               {profile.name}
             </h3>

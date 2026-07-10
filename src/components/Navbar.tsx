@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { navItems, profile } from "../data/portfolio";
+import { ProfileAvatar } from "./ProfileAvatar";
 import { scrollToId, scrollToTop } from "../lib/smoothScroll";
 
 export function Navbar({ active }: { active: string }) {
@@ -54,12 +55,7 @@ export function Navbar({ active }: { active: string }) {
             scrollToTop();
           }}
         >
-          <span
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-mint text-sm font-bold text-ink-950 shadow-lg shadow-accent/20 transition-transform duration-300 ease-smooth group-hover:scale-105 sm:h-10 sm:w-10"
-            aria-hidden
-          >
-            {profile.initials}
-          </span>
+          <ProfileAvatar size="sm" className="shadow-lg shadow-accent/20" />
           <span className="min-w-0 truncate font-serif text-lg leading-none text-white sm:text-xl">
             <span className="md:hidden">{profile.brandShort}</span>
             <span className="hidden md:inline">{profile.brandFull}</span>

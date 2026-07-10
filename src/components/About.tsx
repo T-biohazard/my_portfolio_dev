@@ -15,7 +15,7 @@ export function About() {
       id="about"
       label="About me"
       title="Research depth. Production discipline."
-      subtitle="Ph.D. applicant (Fall 2026) · building AI that is adaptive, explainable, and safe for real people."
+      subtitle="PhD applicant (Fall 2027) · building AI that is adaptive, explainable, and safe for real people."
     >
       <div className="grid gap-8 lg:grid-cols-5 lg:gap-12">
         <div className="reveal space-y-5 lg:col-span-3">
@@ -41,6 +41,16 @@ export function About() {
               {education.period} · CGPA {education.gpa}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-mint">{education.note}</p>
+            {education.thesisSupervisor && (
+              <p className="mt-2 text-xs text-ink-500">
+                Thesis: {education.thesisSupervisor}
+              </p>
+            )}
+            {education.researchSupervisor && (
+              <p className="text-xs text-ink-500">
+                Research: {education.researchSupervisor}
+              </p>
+            )}
           </div>
 
           <div className="glass-card p-6">

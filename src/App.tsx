@@ -63,7 +63,7 @@ export default function App() {
       </main>
       <footer className="border-t border-white/[0.04] px-4 py-10 text-center">
         <p className="text-sm text-ink-500">
-          © {new Date().getFullYear()} {profile.name} · AI Engineer & Researcher
+          © {new Date().getFullYear()} {profile.name} · {profile.title}
         </p>
         <p className="mt-2 text-xs text-ink-600">
           Dhaka, Bangladesh · Building AI for wellness, health, and communities that need it most.

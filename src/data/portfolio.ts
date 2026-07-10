@@ -17,14 +17,17 @@ export const profile = {
   brandShort: "Tahsin",
   brandFull: "Md Tahsin",
   initials: "MT",
-  title: "AI Engineer & Researcher",
-  scholarAffiliation: "AI Engineer @ MagicMind.me · Research Assistant (AI) @ EWU",
+  title: "AI Engineer · Research Scientist · PhD Applicant (Fall 2027)",
+  scholarAffiliation:
+    "AI & MLOps Engineer @ MagicMind · Graduate Research Assistant @ EWU",
   tagline:
-    "I design AI that listens to the body, explains its decisions, and ships reliably — from EEG stress datasets to multi-agent wellness platforms.",
+    "I build AI that reads the body, explains its decisions, and ships at scale — from EEG stress datasets and medical imaging to multi-agent wellness platforms with formally verified safety.",
   location: "Gulshan-01, Dhaka-1216, Bangladesh",
   email: "tahsin30899@gmail.com",
   phone: "+880 1763-357810",
-  availability: "Open to Ph.D. collaborations, research partnerships, and impactful AI roles",
+  age: 24,
+  availability:
+    "Applying for PhD programmes in the United States (Fall 2027) · open to research collaborations and impactful AI engineering roles",
   links: {
     scholar: "https://scholar.google.com/citations?user=6zm80xAAAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/tahsin0o/",
@@ -33,10 +36,10 @@ export const profile = {
     email: "mailto:tahsin30899@gmail.com",
   },
   stats: [
-    { value: "17+", label: "Accepted publications", sub: "Q1 journals · IEEE · Springer" },
-    { value: "60+", label: "Students mentored", sub: "AI · research · publishing" },
-    { value: "6", label: "Journal papers", sub: "Elsevier · IEEE Access · Array" },
-    { value: "9+", label: "Conference papers", sub: "IEEE · Springer Nature" },
+    { value: "17+", label: "Peer-reviewed publications", sub: "Q1 Elsevier · IEEE · Springer" },
+    { value: "50+", label: "Students mentored", sub: "GRA · research · publishing" },
+    { value: "4", label: "1st-author Q1 journals", sub: "Elsevier Data in Brief & JAFR" },
+    { value: "8", label: "Conference papers", sub: "IEEE · Springer Nature" },
   ],
 };
 
@@ -51,62 +54,63 @@ export const navItems = [
 
 export const heroSlides = [
   {
-    eyebrow: "Now · Magic Mind Co Ltd. · Silicon Valley",
-    headline: "Wellness AI grounded in your physiology",
-    body: "Five collaborating agents adapt breathwork and learning to live EEG, HRV, and SpO2 — with PDDL-verified safety before anything runs.",
-    cta: "See my industry work",
+    eyebrow: "Now · MagicMind Co. Ltd. · Silicon Valley",
+    headline: "PEMS-aware wellness AI in real time",
+    body: "Five AGNO agents adapt breathwork, meditation, and learning to live EEG, HRV, and SpO₂ — with PDDL-verified safety before anything executes.",
+    cta: "See industry work",
     accent: "accent" as const,
   },
   {
-    eyebrow: "Research · Semi-supervised & XAI",
-    headline: "High accuracy with fewer labels",
-    body: "FixMatch + DenseNet on betel leaf disease: 98% accuracy using only 30% labeled data, with Grad-CAM++ and ScoreCAM clinicians can trust.",
-    cta: "Browse publications",
+    eyebrow: "Production · BingeBD · Robi Axiata",
+    headline: "From App Store to recommendation ML",
+    body: "Shipped Bangladesh's #1 streaming app in Swift/UIKit, built personalised recommendation pipelines, and deployed an LLM support chatbot at national scale.",
+    cta: "See experience",
     accent: "mint" as const,
   },
   {
-    eyebrow: "Dataset · ExamStressEEG · Mendeley",
-    headline: "What does stress look like in the brain?",
-    body: "26 students, Muse 2 headband, five frequency bands captured during real exams — now public for mental-health and BCI research.",
+    eyebrow: "Research · ExamStressEEG · BCI",
+    headline: "Stress, brainwaves, and adaptive AI",
+    body: "26 participants, Muse 2, five EEG bands during live exams — plus BCI research including EEG-based wheelchair control for motor-disabled users.",
     cta: "Explore research",
     accent: "violet" as const,
   },
 ];
 
 export const aboutIntro =
-  "Hi — I'm Tahsin. I grew up in Bangladesh watching technology skip the communities that needed it most. That shaped everything I build today: AI that is rigorous in the lab, honest in production, and kind to the people it serves.";
+  "Hi — I'm Tahsin, 24, based in Dhaka. I grew up watching technology skip the communities that needed it most. That shaped everything I build: AI that is rigorous in research, honest in production, and meant for people historically last to benefit from it.";
 
 export const aboutParagraphs = [
-  "I'm an AI Engineer at Magic Mind (Silicon Valley, remote) and a Research Assistant at East West University, working across agentic systems, health biometrics, computer vision, and explainable deep learning.",
-  "My research journey started with something everyday — rice authenticity for millions of Bangladeshis. That work reached BRRI, became Elsevier datasets, and showed me how careful AI can protect real lives.",
-  "Today I mentor 60+ students, publish in Q1 venues, and ship platforms like Binge BD while asking harder questions: How do we make agents creative and formally safe? How do we personalize from consumer-grade sensors people already wear?",
+  "I'm an AI & MLOps Engineer at MagicMind (Silicon Valley, remote) and a Graduate Research Assistant at East West University — across agentic systems, physiological AI, medical imaging, agricultural AI, and explainable deep learning.",
+  "My path started with rice authenticity for millions of Bangladeshis. That work reached BRRI and BINA, became nationally recognised Elsevier datasets, and showed me how careful AI can protect real lives.",
+  "At Reddot Digital (Robi Axiata — top-5 company in Bangladesh), I learned engineering at scale: Swift/UIKit for BingeBD on the App Store, recommendation ML, LLM chatbots, and production server security. At MagicMind, those lessons meet open research questions about physiological state, multi-agent safety, and formal planning.",
+  "I'm applying for PhD programmes in the United States for Fall 2027 to pursue adaptive physiological AI, uncertainty-aware agent systems, and formally safe human-facing AI.",
 ];
 
 export const researchInterests = [
   {
-    title: "Agentic AI & Multi-Agent Systems",
-    detail: "Planning, reasoning, tool-use, AGNO, PDDL-based structured planning",
+    title: "Agentic & Generative AI",
+    detail: "LLM agents, planning, reasoning, tool-use, AGNO, LangGraph, CrewAI",
     icon: "🤖",
   },
   {
-    title: "Microservices & MLOps",
-    detail: "NATS JetStream, CI/CD, real-time deployment, event-driven architecture",
-    icon: "⚡",
-  },
-  {
-    title: "Health Biometrics & Physiological AI",
-    detail: "EEG/BCI, HRV, SpO₂ — Muse 2, Apple Watch, Fitbit, Aura Ring",
+    title: "Physiological AI & BCI",
+    detail: "EEG, HRV, SpO₂, Muse 2, Apple Watch, Fitbit, Aura Ring, BCI systems",
     icon: "💓",
   },
   {
-    title: "Semi- & Self-Supervised Learning",
-    detail: "FixMatch, transfer learning, few-shot and zero-shot paradigms",
-    icon: "📊",
+    title: "Medical AI",
+    detail: "Diagnostics, clinical decision support, semi-supervised medical imaging",
+    icon: "🏥",
   },
   {
-    title: "Generative AI & LLM Systems",
-    detail: "RAG pipelines, prompt tuning, instruction tuning, LLM agents",
-    icon: "✨",
+    title: "Agricultural AI & Food Security",
+    detail: "Crop disease, rice/paddy datasets — BRRI, BINA, BFRI collaborations",
+    icon: "🌾",
+  },
+  {
+    title: "Semi- & Self-Supervised Learning",
+    detail: "FixMatch, few/zero-shot, transfer learning on low-label datasets",
+    icon: "📊",
   },
   {
     title: "Explainable AI (XAI)",
@@ -114,57 +118,73 @@ export const researchInterests = [
     icon: "🔍",
   },
   {
-    title: "Deep Learning Architectures",
-    detail: "Custom CNNs, CBAM attention, Transformers, Swin Transformer",
-    icon: "🧠",
+    title: "NLP & LLM Systems",
+    detail: "RAG, fine-tuning, instruction tuning, prompt versioning",
+    icon: "✨",
   },
   {
-    title: "Multimodal & Edge AI",
-    detail: "Vision–language, vision–audio, cross-modal fusion, edge deploy",
-    icon: "🌐",
+    title: "MLOps & Scalable AI",
+    detail: "Docker, Kubernetes, Terraform, GCP/AWS, model serving, CI/CD",
+    icon: "⚡",
+  },
+  {
+    title: "Computer Vision",
+    detail: "CNNs, Transformers, CBAM attention, Swin Transformer, video understanding",
+    icon: "👁",
+  },
+  {
+    title: "Cybersecurity AI",
+    detail: "AI for security applications and resilient production systems",
+    icon: "🛡",
   },
 ];
 
 export const researchDomains = [
   {
     domain: "Agricultural & Food AI",
-    summary: "Rice, paddy, betel, tea — datasets recognized by BRRI, BINA, and local industry partners.",
+    summary:
+      "Rice, paddy, betel, tea, medicinal plants — datasets recognised by BRRI, BINA, and BFRI.",
     projects: [
-      "Betel leaf disease — 98% accuracy, J. Agric. Food Res. (Q1, IF 6.2)",
-      "Rice kernel datasets — 19,000 images, 38 varieties (Data in Brief)",
-      "Tea leaf classification — ICDMIS 2024, Springer LNNS",
-      "PaddyVarietyBD & Grain by Grain microscopic datasets",
+      "Betel leaf disease — 98% accuracy, J. Agric. Food Res. (Q1, IF 6.2) — 1st Author",
+      "Rice kernel datasets — 19,000 images, 38 varieties (Data in Brief) — 1st Author",
+      "Tea leaf classification — ICDMIS 2024, Springer LNNS — 1st Author",
+      "PaddyVarietyBD & Grain by Grain microscopic datasets — 1st Author",
     ],
     color: "mint",
   },
   {
     domain: "Medical Imaging & Diagnostics",
-    summary: "Semi-supervised and XAI pipelines for conditions where labeled data is scarce.",
+    summary:
+      "Semi-supervised and XAI pipelines where labelled clinical data is scarce.",
     projects: [
-      "Cervical cancer — 94% accuracy, half the labels (IEEE ICCIT ★ Best Presenter)",
-      "Alzheimer's FixMatch — IEEE Access (Q1)",
-      "Appendicitis ultrasound thesis — 95.58% InceptionV3, CMPB under review",
-      "PCOS, diabetic foot ulcer, retinal OCT, cardiovascular risk forecasting",
+      "Cervical cancer — semi-supervised learning, IEEE ICCIT 2024 ★ Best Presenter — 1st Author",
+      "Alzheimer's FixMatch — IEEE Access (Q1) — Co-author",
+      "PCOS real-time XAI diagnosis — Springer ICIDA 2024 — Co-author",
+      "Diabetic foot ulcer detection — DETR + YOLOv5, RAISA 2023 — Co-author",
+      "Retinal OCT & cardiovascular risk forecasting — IEEE — Co-author",
     ],
     color: "accent",
   },
   {
     domain: "Physiological AI & BCI",
-    summary: "Consumer sensors feeding adaptive, safety-aware AI systems.",
+    summary: "Consumer sensors and biosignals feeding adaptive, safety-aware AI.",
     projects: [
       "ExamStressEEG — 26 participants, Muse 2, Mendeley DOI 10.17632/fyj9by2t22.1",
-      "Real-time HRV/EEG/SpO₂ fusion in Magic Mind agent stack",
-      "PDDL safety gates for breathwork (SpO₂ thresholds before retention)",
+      "EEG-based wheelchair control for motor-disabled users",
+      "Real-time HRV/EEG/SpO₂ fusion in MagicMind's 5-agent stack",
+      "LLM-to-PDDL safety gates for breathwork (SpO₂ thresholds before retention)",
     ],
     color: "violet",
   },
   {
-    domain: "Conservation & Industry",
-    summary: "From endangered medicinal plants to Bangladesh's #1 OTT platform.",
+    domain: "Industry, Infra & Conservation",
+    summary:
+      "From endangered medicinal plants to Bangladesh's #1 OTT platform and production infra.",
     projects: [
-      "REMP — Swin Transformer for rare medicinal plants (IEEE, accepted)",
+      "REMP — Swin Transformer for rare medicinal plants (IEEE) — Co-author",
       "BFRI bamboo species classification partnership",
-      "Binge BD recommendation engine & LLM chatbot (Reddot / Axiata)",
+      "BingeBD iOS (Swift/UIKit/MVVM) + recommendation ML + LLM chatbot — Reddot / Axiata",
+      "Datacenter & infra — Terraform, Headscale/Tailscale, AWS EC2, Hetzner",
     ],
     color: "amber",
   },
@@ -173,33 +193,37 @@ export const researchDomains = [
 export const experience = [
   {
     id: "magicmind",
-    role: "AI Engineer",
-    org: "Magic Mind Co Ltd.",
+    role: "AI & MLOps Engineer",
+    org: "MagicMind Co. Ltd.",
     badge: "Silicon Valley",
     location: "California, USA · Remote",
     period: "July 2025 – Present",
     summary:
-      "Building an AI-driven human wellness platform — agent systems, microservices, health biometrics, and formally verified planning.",
+      "Next-generation gamified wellness platform — adaptive breathwork, meditation, and immersive journeys with live PEMS biofeedback and AI personalisation.",
     highlights: [
       {
-        title: "Multi-Agent Systems (AGNO)",
-        text: "5-agent personalization engine: Student State Analyzer (HRV/EEG/O₂ fusion), Chapter Understanding, Personalization Strategist (3-timescale curriculum + Safety Guardian), Chapter Composer, Evaluator with memory loop.",
+        title: "5-Agent Personalisation Engine (AGNO)",
+        text: "Student State Analyzer (EEG/HRV/SpO₂ fusion), Personalization Strategist (3-timescale planning + Safety Guardian), Chapter Composer, Evaluator Agent with persistent memory and feedback loop.",
       },
       {
-        title: "Microservices (E2E)",
-        text: "NATS JetStream, FastAPI, TimescaleDB, SQL LRS (lrsql/xAPI) via LRSPipe, Hasura GraphQL — API contracts, schema governance, inter-service patterns.",
+        title: "LLM-to-PDDL Planning (L2P)",
+        text: "Convert LLM wellness journeys into formally verified PDDL plans — SpO₂ gating, step ordering, Unity/FastAPI execution. Novel formal planning for consumer wellness AI.",
       },
       {
-        title: "LLM-to-PDDL (L2P)",
-        text: "Convert LLM wellness journeys into verified PDDL plans — SpO₂ thresholds, step ordering, Unity/FastAPI execution.",
+        title: "Health Biometrics R&D",
+        text: "Full pipeline: Muse 2 EEG (5-band), HRV, SpO₂, Apple HealthKit, Fitbit, Aura Ring — real-time physiological state feeds agents and safety gates.",
       },
       {
-        title: "Health Biometrics",
-        text: "Muse 2 EEG bands, HRV, SpO₂, Apple HealthKit, Fitbit, Aura Ring — real-time state feeds agents and safety gates.",
+        title: "RAG & LLM Systems",
+        text: "Vedic Life Report RAG (VoyageAI embeddings, FAISS/pgvector, feedback-weighted re-ranking); PyJHora chart computation; LLM narrative synthesis.",
       },
       {
-        title: "MLOps & RAG",
-        text: "W&B tracking, Docker/K8s/GCP CI/CD, Vedic Life Report RAG (VoyageAI/OpenAI + PyJHora), course creator with git-like versioning.",
+        title: "Microservices & Backend",
+        text: "FastAPI, NATS JetStream, TimescaleDB, SQL LRS (xAPI/lrsql) via LRSPipe, Hasura GraphQL — API contracts, schema governance, security & scaling.",
+      },
+      {
+        title: "MLOps & Infrastructure",
+        text: "W&B experiment tracking, prompt versioning, Docker/Kubernetes, Terraform IaC, GCP CI/CD, Headscale/Tailscale VPN mesh, AWS EC2, Hetzner deployment.",
       },
     ],
   },
@@ -207,67 +231,98 @@ export const experience = [
     id: "reddot",
     role: "Software Engineer",
     org: "Reddot Digital Limited",
-    orgParent: "Axiata Group",
+    orgParent: "Axiata Group (Robi Axiata)",
     location: "Dhaka, Bangladesh",
     period: "Nov 2024 – June 2025",
-    summary: "Scaled AI products for Bangladesh's leading digital entertainment platform.",
+    summary:
+      "Production engineering for BingeBD — Bangladesh's #1 streaming platform within one of Bangladesh's top-5 companies.",
     highlights: [
       {
-        title: "Recommendation Engine",
-        text: "Personalized content recommendation system driving engagement on Binge BD.",
+        title: "iOS Development (BingeBD)",
+        text: "Built and maintained the App Store-published app — Swift, UIKit, MVVM, AVFoundation, CoreData, REST APIs, push notifications.",
       },
       {
-        title: "Binge BD (OTT)",
-        text: "Developed and published Bangladesh's leading OTT app on the Apple App Store.",
+        title: "ML Recommendation Pipeline",
+        text: "Designed and deployed personalised content recommendation engine improving discovery and user retention.",
       },
       {
-        title: "LLM Chatbot",
-        text: "Deployed real-time LLM support for user queries and platform assistance.",
+        title: "LLM Chatbot & Web Platform",
+        text: "Deployed real-time LLM user-support chatbot; contributed to BingeBD web streaming platform.",
+      },
+      {
+        title: "Backend, Security & Scaling",
+        text: "API security, rate limiting, server-side maintenance, scalability optimisations, and CI/CD pipeline management.",
+      },
+    ],
+  },
+  {
+    id: "infra",
+    role: "Infrastructure Engineer (Contract)",
+    org: "Datacenter & Cloud Environments",
+    location: "Remote / On-site",
+    period: "2024 – 2025",
+    summary:
+      "Hands-on datacenter and infrastructure work between industry roles — deployments, networking, and production server operations.",
+    highlights: [
+      {
+        title: "Server & Deployment Ops",
+        text: "Managed servers, handled deployments, and maintained production infrastructure across cloud and bare-metal environments.",
+      },
+      {
+        title: "Networking & IaC",
+        text: "Headscale/Tailscale VPN mesh networking; Terraform for infrastructure-as-code; AWS EC2 and Hetzner server deployment.",
       },
     ],
   },
   {
     id: "ewu",
-    role: "Research Assistant",
+    role: "Graduate Research Assistant (GRA)",
     org: "East West University",
     location: "Dhaka, Bangladesh",
     period: "Aug 2023 – Present",
     supervisor: "Dr. Raihan Ul Islam, Associate Professor, CSE",
-    summary: "Medical imaging, agricultural AI, biosignals — from datasets to peer-reviewed papers.",
+    summary:
+      "Medical imaging, agricultural AI, biosignals — from nationally recognised datasets to peer-reviewed publications.",
     highlights: [
       {
-        title: "Applied AI Research",
-        text: "Models for medical imaging, agricultural quality control, and biosignal processing.",
+        title: "Research & Model Development",
+        text: "AI/ML across medical imaging, agricultural AI, and biosignal processing; datasets in collaboration with BRRI, BINA, and BFRI.",
       },
       {
-        title: "Public Datasets",
-        text: "Co-developed ExamStressEEG (Mendeley DOI: 10.17632/fyj9by2t22.1); curated rice, paddy, and crop datasets.",
+        title: "BCI & EEG Research",
+        text: "Co-developed ExamStressEEG (Mendeley DOI: 10.17632/fyj9by2t22.1); EEG-based wheelchair control for motor-disabled users.",
       },
       {
-        title: "Mentorship",
-        text: "Guided 60+ students through AI projects, research methodology, and the publication process.",
+        title: "Semi/Self-Supervised Learning",
+        text: "FixMatch and self-supervised pipelines on low-label medical and agricultural datasets; CBAM-augmented custom CNNs.",
+      },
+      {
+        title: "Teaching & Mentoring",
+        text: "Mentored ~50+ undergraduates through AI research, paper writing, and publication; conducted lab sessions and capstone guidance.",
       },
     ],
   },
 ];
 
 export const education = {
-  school: "East West University",
-  degree: "Bachelor of Computer Science & Engineering (CSE)",
+  school: "East West University, Dhaka, Bangladesh",
+  degree: "B.Sc. Computer Science & Engineering (CSE)",
   period: "2020 – 2024",
   gpa: "3.23",
-  note: 'Featured as a "Successful Student" in the EWU newsletter for research and academic accomplishments',
+  thesisSupervisor: "Prof. Nawab Yousuf Ali, Professor, CSE",
+  researchSupervisor: "Dr. Raihan Ul Islam, Associate Professor, CSE",
+  note: 'Recognised as "Successful Student" in the EWU newsletter for outstanding research and academic contributions',
 };
 
 export const publications: Publication[] = [
   {
     title:
-      "Leveraging pre-trained models within a semi-supervised and explainable AI RealTime framework: A pioneering paradigm for betel leaf disease detection",
-    venue: "Journal of Agriculture and Food Research, Elsevier",
+      "Leveraging pre-trained models within a semi-supervised and explainable AI framework for betel leaf disease detection",
+    venue: "Journal of Agriculture & Food Research, Elsevier (Q1, IF 6.2)",
     role: "1st Author",
     year: "2025",
     detail: "DenseNet201 + FixMatch — 98% accuracy, 30% labeled data; GradCAM++, ScoreCAM",
-    tags: ["Q1", "IF 6.2", "XAI", "FixMatch"],
+    tags: ["Q1", "XAI", "FixMatch", "Agriculture"],
     type: "journal",
   },
   {
@@ -282,7 +337,7 @@ export const publications: Publication[] = [
   },
   {
     title:
-      "Grain by Grain: A Microscopic Image Dataset of Rice Varieties from Bangladeshi Rice Markets",
+      "Grain by Grain: Microscopic image dataset of rice varieties from Bangladeshi markets",
     venue: "Data in Brief, Elsevier",
     role: "1st Author",
     year: "2025",
@@ -298,143 +353,96 @@ export const publications: Publication[] = [
     type: "journal",
   },
   {
-    title:
-      "A FixMatch Framework for Alzheimer's Disease Classification: Exploring the Trade-Off Between Supervision and Performance",
+    title: "A FixMatch Framework for Alzheimer's Disease Classification",
     venue: "IEEE Access (Q1, IF 3.4)",
-    role: "3rd Author",
+    role: "Co-author",
     year: "2025",
     tags: ["Healthcare", "Semi-Supervised"],
     type: "journal",
   },
   {
-    title:
-      "RiceKernelEngine: Benchmarking transfer learning models for microscopic images of rice kernel",
+    title: "RiceKernelEngine: Benchmarking transfer learning models for rice kernel images",
     venue: "Array, Elsevier (Q1, IF 4.5)",
-    role: "3rd Author",
+    role: "Co-author",
     year: "2025",
     tags: ["Benchmark"],
     type: "journal",
   },
   {
-    title:
-      "Enhancing Cervical Cancer Detection: Leveraging Semi-Supervised Learning for Improved Prognosis",
-    venue: "27th ICCIT 2024, IEEE — Cox's Bazar, pp. 499–504",
+    title: "Enhancing Cervical Cancer Detection: Leveraging Semi-Supervised Learning",
+    venue: "IEEE ICCIT 2024, Cox's Bazar",
     role: "1st Author",
     year: "2024",
-    detail: "94% accuracy with half the labeled data",
+    detail: "Semi-supervised prognosis with reduced labelled data",
     award: "★ Best Presenter Award",
     tags: ["Healthcare", "IEEE"],
     type: "conference",
   },
   {
     title: "Efficient tea leaf classification: Bridging supervised and semi-supervised learning",
-    venue: "ICDMIS 2024, Springer LNNS Vol. 1389",
+    venue: "Springer LNNS, ICDMIS 2024",
     role: "1st Author",
     year: "2024",
     tags: ["Agriculture", "Springer"],
     type: "conference",
   },
   {
-    title:
-      "Leveraging Explainable Artificial Intelligence for Real-Time Diagnosis of Polycystic Ovary Syndrome",
-    venue: "ICIDA 2024, Springer LNNS Vol. 1410",
-    role: "2nd Author",
+    title: "XAI for Real-Time Diagnosis of Polycystic Ovary Syndrome",
+    venue: "Springer LNNS, ICIDA 2024",
+    role: "Co-author",
     year: "2024",
     tags: ["XAI", "Healthcare"],
     type: "conference",
   },
   {
     title: "EnDFUD: Enhanced Diabetic Foot Ulcer Detection with DETR and YOLOv5",
-    venue: "RAISA 2023, Springer ISTC",
-    role: "3rd Author",
+    venue: "Springer ISTC, RAISA 2023",
+    role: "Co-author",
     year: "2023",
     tags: ["Detection"],
     type: "conference",
   },
   {
-    title: "DeepCerviNet: Enhanced Cervical Cancer Classification Using Supervised Learning",
+    title: "DeepCerviNet: Enhanced Cervical Cancer Classification",
     venue: "IEEE RAAICON 2025, Dhaka",
-    role: "3rd Author",
+    role: "Co-author",
     year: "2025",
     tags: ["Healthcare", "IEEE"],
     type: "conference",
   },
   {
-    title:
-      "Not So Labeled Approach: FixMatch Outperforms Supervised Learning in Mango Leaf Disease Detection with XAI Insights",
-    venue: "RAAISA 2024, Springer LNNS Vol. 1380",
-    role: "3rd Author",
-    year: "2024",
-    tags: ["XAI", "Agriculture"],
+    title: "Attention-Guided Neural Networks for Retinal Disease Detection in OCT Images",
+    venue: "IEEE Conference",
+    role: "Co-author",
+    year: "2025",
+    tags: ["Medical Imaging", "XAI"],
     type: "conference",
   },
   {
-    title:
-      "Deep Learning for Automated Classification of Complicated Appendicitis in Ultrasound Imaging with Explainable AI",
-    venue: "Under review — Computer Methods and Programs in Biomedicine, Elsevier (Q1)",
-    role: "Thesis · 1st Author",
-    year: "2024",
-    detail: "InceptionV3 95.58% · 4,679 samples · Grad-CAM clinical web app",
-    tags: ["Thesis", "Medical Imaging"],
-    type: "thesis",
+    title: "Harnessing ML to Forecast Cardiovascular Disease Risk with XAI",
+    venue: "IEEE Conference",
+    role: "Co-author",
+    year: "2025",
+    tags: ["Healthcare", "XAI"],
+    type: "conference",
   },
   {
-    title:
-      "ExamStressEEG: Comprehensive EEG Dataset Capturing Student Stress During Exams",
+    title: "REMP: Swin Transformer for Rare & Endangered Medicinal Plant Classification",
+    venue: "IEEE Conference",
+    role: "Co-author",
+    year: "2025",
+    tags: ["Conservation", "Swin Transformer"],
+    type: "conference",
+  },
+  {
+    title: "ExamStressEEG: Comprehensive EEG Dataset Capturing Student Stress During Exams",
     venue: "Mendeley Data",
     role: "Co-author",
     year: "2025",
-    detail: "Muse 2 · 26 participants · 5-band brainwave capture",
+    detail: "Muse 2 · 26 participants · 5-band EEG during live exam stress",
     doi: "10.17632/fyj9by2t22.1",
     tags: ["EEG", "BCI", "Dataset"],
     type: "dataset",
-  },
-  {
-    title:
-      "Integrating Multiple Learning Techniques with Explainable AI for Accurate Monkeypox Classification",
-    venue: "MDPI Journal (Q2)",
-    role: "1st Author",
-    tags: ["Under Review"],
-    type: "pending",
-  },
-  {
-    title:
-      "An Ensemble Deep Learning Approach Surpassing Pretrained Models in Rice Kernel Classification",
-    venue: "IEEE Access (Q1, IF 3.9)",
-    role: "1st Author",
-    tags: ["Under Review"],
-    type: "pending",
-  },
-  {
-    title: "Biodiversity Conservation in Bangladesh: Classifying Rare Medicinal Plants",
-    venue: "J. Agriculture and Food Research, Elsevier (Q1, IF 6.2)",
-    role: "1st Author",
-    tags: ["Under Review"],
-    type: "pending",
-  },
-  {
-    title:
-      "Attention-Guided Neural Networks for Explainable Retinal Disease Detection in OCT Images",
-    venue: "IEEE Conference",
-    role: "1st Author",
-    tags: ["Accepted"],
-    type: "accepted",
-  },
-  {
-    title:
-      "Harnessing Machine Learning to Forecast Cardiovascular Disease Risk with Explainable AI",
-    venue: "IEEE Conference",
-    role: "1st Author",
-    tags: ["Accepted"],
-    type: "accepted",
-  },
-  {
-    title:
-      "REMP: A Swin Transformer-Powered Approach to Classifying Rare and Endangered Medicinal Plants",
-    venue: "IEEE Conference",
-    role: "1st Author",
-    tags: ["Accepted", "Swin Transformer"],
-    type: "accepted",
   },
 ];
 
@@ -443,38 +451,39 @@ export const pubFilters: { id: PublicationType | "all"; label: string }[] = [
   { id: "journal", label: "Journals" },
   { id: "conference", label: "Conferences" },
   { id: "dataset", label: "Datasets" },
-  { id: "thesis", label: "Thesis" },
-  { id: "accepted", label: "Accepted" },
-  { id: "pending", label: "Under Review" },
 ];
 
 export const skillGroups = [
   {
-    category: "Programming Languages",
-    items: ["Python", "Java", "JavaScript", "C", "C++", "Swift"],
+    category: "Languages",
+    items: ["Python", "Java", "JavaScript", "TypeScript", "C", "C++", "Swift"],
     level: "core",
   },
   {
-    category: "ML & Deep Learning",
+    category: "AI / ML",
     items: [
       "PyTorch",
-      "Hugging Face Transformers",
+      "HuggingFace Transformers",
       "TensorFlow",
       "JAX",
       "scikit-learn",
-      "PyTorch Geometric",
-      "OpenCV",
+      "PyG",
       "DeepSpeed",
-      "Weights & Biases",
+      "W&B",
+      "OpenCV",
+      "NLTK",
+      "spaCy",
     ],
     level: "core",
   },
   {
-    category: "Agent Systems & Planning",
+    category: "Agents & Planning",
     items: [
-      "AGNO Framework",
-      "LLM-to-PDDL (L2P)",
+      "AGNO",
+      "LangGraph",
       "LangChain",
+      "CrewAI",
+      "LLM-to-PDDL (L2P)",
       "RAG Pipelines",
       "FAISS",
       "pgvector",
@@ -483,59 +492,91 @@ export const skillGroups = [
     level: "core",
   },
   {
-    category: "Web, Mobile & APIs",
+    category: "MLOps & Infra",
     items: [
+      "Docker",
+      "Kubernetes",
+      "Terraform (IaC)",
+      "Headscale",
+      "Tailscale",
+      "AWS EC2",
+      "Hetzner",
+      "GCP CI/CD",
+      "FastAPI async serving",
+      "Prompt versioning",
+    ],
+    level: "core",
+  },
+  {
+    category: "iOS / Mobile",
+    items: [
+      "Swift",
+      "UIKit",
+      "SwiftUI",
+      "MVVM",
+      "AVFoundation",
+      "CoreData",
+      "REST integration",
+      "App Store deployment",
+    ],
+    level: "strong",
+  },
+  {
+    category: "Web & Backend",
+    items: [
+      "System Design",
       "FastAPI",
       "Flask",
       "Django",
       "React",
       "Next.js",
       "MERN Stack",
-      "Tailwind CSS",
-      "SwiftUI",
-      "UIKit",
+      "Node.js",
+      "GraphQL (Hasura)",
+      "API security",
+      "Rate limiting",
     ],
     level: "strong",
   },
   {
-    category: "Cloud & DevOps",
-    items: ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD", "Git", "Linux CLI"],
-    level: "strong",
-  },
-  {
-    category: "Biometric & Sensor SDKs",
-    items: [
-      "Muse 2 EEG SDK",
-      "Apple HealthKit",
-      "Fitbit API",
-      "Aura Ring API",
-      "HRV / SpO₂ Interfaces",
-    ],
-    level: "specialty",
-  },
-  {
-    category: "Databases & Data Layer",
+    category: "Databases",
     items: [
       "TimescaleDB",
       "PostgreSQL",
+      "MongoDB",
       "Redis",
-      "SQL LRS (xAPI)",
-      "Hasura GraphQL",
+      "SQL LRS (xAPI/lrsql)",
+      "Hasura",
       "FAISS",
       "pgvector",
     ],
     level: "strong",
   },
   {
-    category: "Design & Collaboration",
+    category: "Biometric SDKs",
     items: [
+      "Muse 2 EEG SDK",
+      "Apple HealthKit",
+      "Fitbit API",
+      "Aura Ring API",
+      "HRV/SpO₂ interfaces",
+      "BCI systems",
+    ],
+    level: "specialty",
+  },
+  {
+    category: "Tools & IDEs",
+    items: [
+      "Cursor",
+      "GitHub Copilot",
+      "Jupyter",
+      "VS Code",
+      "Xcode",
+      "Postman",
       "Figma",
-      "Adobe Photoshop",
-      "Adobe Illustrator",
+      "LaTeX",
       "Jira",
       "Trello",
-      "LaTeX",
-      "Jupyter / Colab",
     ],
     level: "tools",
   },
@@ -543,38 +584,53 @@ export const skillGroups = [
 
 export const accomplishments = [
   {
-    title: "Best Presenter Award",
-    detail: "IEEE ICCIT 2024 — cervical cancer semi-supervised learning",
+    title: "17+ Peer-Reviewed Publications",
+    detail:
+      "Among the highest research outputs for an undergraduate researcher in Bangladesh — Q1 Elsevier, IEEE, Springer",
+  },
+  {
+    title: "Best Presenter Certificate",
+    detail: "IEEE ICCIT 2024, Cox's Bazar, Bangladesh",
+  },
+  {
+    title: "Successful Student — EWU Newsletter",
+    detail: "Recognised for outstanding research and academic contributions, 2024",
+  },
+  {
+    title: "Leadership & Mentoring",
+    detail: "~50+ undergraduates mentored through AI research, paper writing, and publication",
   },
   {
     title: "Capstone Showcase Runner-up",
     detail: "East West University, 2024",
   },
   {
-    title: "Programming Contest — 4th Place",
+    title: "Programming Contest — 5th Place",
     detail: "Intra-university, EWU 2022",
   },
   {
-    title: "Institutional Recognition",
+    title: "National Dataset Recognition",
     detail: "Datasets endorsed by BRRI, BINA, and BFRI",
   },
   {
-    title: "17+ Publications",
-    detail: "Achieved as undergraduate and early-career researcher",
+    title: "Multinational Industry Experience",
+    detail: "Robi Axiata Group, MagicMind (Silicon Valley), datacenter & infrastructure environments",
   },
 ];
 
 export const mentors = [
-  "Prof. Md. Sawkat Ali — East West University",
-  "Dr. Md. Raihan Ul Islam — East West University (RA Supervisor)",
-  "Prof. Mohammad Shahadat Hossain — University of Chittagong",
-  "Prof. Karl Andersson — Luleå University of Technology",
+  "Prof. Nawab Yousuf Ali — East West University (Thesis Supervisor)",
+  "Dr. Raihan Ul Islam — East West University (GRA Research Supervisor)",
+  "Dr. Md Sawkat Ali — East West University (Research Collaborator)",
+  "Prof. Mohammad Shahadat Hossain — University of Chittagong / UT Dallas & Luleå Univ.",
+  "Prof. Karl Andersson — Luleå University of Technology, Sweden",
 ];
 
 export const extracurricular = [
-  "Team Lead & Volunteer — university research clubs and coding events",
-  "Instructor — AI, mathematics, and programming for 60+ students",
-  "Active researcher — agentic AI, biometrics, CV, NLP, semi-supervised learning",
+  "Teaching — lab sessions, capstone guidance, and research methodology training at EWU",
+  "Mentorship — ~50+ students through AI/ML research and peer-reviewed publication",
+  "Active researcher — agentic AI, biometrics, medical & agricultural AI, semi-supervised learning",
+  "Infrastructure — datacenter ops, VPN mesh networking, and production server deployment",
 ];
 
 export const socialLinks = [
